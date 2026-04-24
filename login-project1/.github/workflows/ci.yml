@@ -20,5 +20,8 @@ jobs:
       - name: Build Project
         run: mvn clean install
 
+      - name: Run Tests from Specific Folder
+        run: mvn clean test -f login-project1/pom.xml
+
       - name: Run Tests
         run: mvn test
