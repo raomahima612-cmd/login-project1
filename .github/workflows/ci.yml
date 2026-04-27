@@ -16,6 +16,10 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '17'
+          distribution: 'temurin'   # ✅ FIX
 
+      - name: Run Tests
+        run: mvn clean test
+        
       - name: Run Tests from Specific Folder
         run: mvn clean test -f login-project1/pom.xml
